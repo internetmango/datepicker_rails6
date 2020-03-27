@@ -1,0 +1,46 @@
+<div class='container'>
+  <div class='text-center'>
+    <h1>Using the default Rails <code>date_field</code></h1>
+    <p>Using the <code>date_field</code> form helper in Rails will render the browser datepicker for <code>&lt;input type='date'&gt;</code>. The view slightly varies across browsers.</p>
+    <p>Read about the <a href='https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date'>browser datepicker at MDN</a> docs.</p>
+    <p>
+      <%= link_to 'View other examples', root_path, class: 'btn btn-secondary' %>
+    </p>
+  </div>
+</div>
+
+<hr />
+
+<section class='mt-5'>
+  <div class='container'>
+    <div class='row justify-content-center'>
+      <div class='col-md-6 border p-3 rounded'>
+        <h4>New Product</h4>
+        <hr class='mb-4'/>
+
+        <%= form_with model: @product, local: true do |f| %>
+
+          <div class="form-group">
+            <%= f.label :name %>
+            <%= f.text_field :name, class: 'form-control' %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :price %>
+            <%= f.number_field :price, class: 'form-control' %>
+            <small class="form-text text-muted">Price in cents</small>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :release_date %>
+            <%= f.date_field :release_date, class: 'form-control' %>
+            <small class="form-text text-muted">Date when the product will be released.</small>
+          </div>
+
+          <%= f.submit class: 'btn btn-primary' %>
+
+        <%- end %>
+      </div>
+    </div>
+  </div>
+</section>
