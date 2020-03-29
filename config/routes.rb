@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     collection do
       get :default_datepicker
       get :bootstrap_datepicker
+      get :tempus_dominus
     end
   end
 

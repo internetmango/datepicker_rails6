@@ -8,4 +8,8 @@ class PagesController < ApplicationController
   def bootstrap_datepicker
     @product = Product.new
   end
+
+  def tempus_dominus
+    @product = Product.new
+  end
 end

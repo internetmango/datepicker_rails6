@@ -47,3 +47,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'bootstrap-datepicker-rails'
+gem 'bs4_datetime_picker'
+gem 'font-awesome-rails'

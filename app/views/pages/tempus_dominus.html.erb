@@ -1,0 +1,50 @@
+<div class='container'>
+  <div class='text-center'>
+    <h1>Using the gem <code>bs4_datetime_picker</code></h1>
+    <p>Implementing datepicker input using <a href='https://github.com/rdavid369/bs4-datetime-picker'>bs4_datetime_picker gem</a>.<br /> This wraps the date time picker js implementation - <a href='https://tempusdominus.github.io/bootstrap-4/'>https://tempusdominus.github.io/bootstrap-4/</a></p>
+    <p>
+      <%= link_to 'View other examples', root_path, class: 'btn btn-secondary' %>
+    </p>
+  </div>
+</div>
+
+<hr />
+
+<section class='mt-5'>
+  <div class='container'>
+    <div class='row justify-content-center'>
+      <div class='col-md-6 border p-3 rounded'>
+        <h4>New Product</h4>
+        <hr class='mb-4'/>
+
+        <%= form_with model: @product, local: true do |f| %>
+
+          <div class="form-group">
+            <%= f.label :name %>
+            <%= f.text_field :name, class: 'form-control' %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :price %>
+            <%= f.number_field :price, class: 'form-control' %>
+            <small class="form-text text-muted">Price in cents</small>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :release_date %>
+            <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+              <%= f.text_field :release_date, class: 'form-control datetimepicker-input', 'data-target': "#datetimepicker1" %>
+              <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                <div class="input-group-text"><i class='fa fa-calendar'></i></div>
+              </div>
+            </div>
+            <small class="form-text text-muted">Date when the product will be released.</small>
+          </div>
+
+          <%= f.submit class: 'btn btn-primary' %>
+
+        <%- end %>
+      </div>
+    </div>
+  </div>
+</section>
