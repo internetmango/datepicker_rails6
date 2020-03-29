@@ -1,24 +1,7 @@
-# README
+## Implementing datepicker in Rails 6
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Source code for - 3 ways to implement date picker in Rails 6.0
 
-Things you may want to cover:
+For details, read the associated blog post at [Internet Mango Blog](https://internetmango.com/blog/implementing-datepicker-in-rails).
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+View the demo [Heroku App](https://datepicker-rails6.herokuapp.com).
