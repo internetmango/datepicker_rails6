@@ -1,0 +1,45 @@
+<div class='container'>
+  <div class='text-center'>
+    <h1>Using the gem <code>bootstrap-datepicker-rails</code></h1>
+    <p>Implementing datepicker input using <a href='https://github.com/Nerian/bootstrap-datepicker-rails'>bootstrap-datepicker-rails gem</a>.<br /> This is an asset pipeline wrapper for the bootstrap 4 based datepicker - <a href='https://github.com/uxsolutions/bootstrap-datepicker'>https://github.com/uxsolutions/bootstrap-datepicker</a></p>
+    <p>
+      <%= link_to 'View other examples', root_path, class: 'btn btn-secondary' %>
+    </p>
+  </div>
+</div>
+
+<hr />
+
+<section class='mt-5'>
+  <div class='container'>
+    <div class='row justify-content-center'>
+      <div class='col-md-6 border p-3 rounded'>
+        <h4>New Product</h4>
+        <hr class='mb-4'/>
+
+        <%= form_with model: @product, local: true do |f| %>
+
+          <div class="form-group">
+            <%= f.label :name %>
+            <%= f.text_field :name, class: 'form-control' %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :price %>
+            <%= f.number_field :price, class: 'form-control' %>
+            <small class="form-text text-muted">Price in cents</small>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :release_date %>
+            <%= f.text_field :release_date, class: 'form-control datepicker' %>
+            <small class="form-text text-muted">Date when the product will be released.</small>
+          </div>
+
+          <%= f.submit class: 'btn btn-primary' %>
+
+        <%- end %>
+      </div>
+    </div>
+  </div>
+</section>

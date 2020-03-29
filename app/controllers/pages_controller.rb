@@ -4,4 +4,8 @@ class PagesController < ApplicationController
   def default_datepicker
     @product = Product.new
   end
+
+  def bootstrap_datepicker
+    @product = Product.new
+  end
 end

@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
+    binding.pry
 
     flash[:info] = 'products#create called'
     redirect_to root_path
